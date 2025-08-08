@@ -1,0 +1,238 @@
+/* A5 Container */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+.a5-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.story-block {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+/* A5 Page */
+ .a5-page {
+  width: 100%;
+  max-width: 188mm;
+  min-height: 210mm;
+  padding: 80px ;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px;
+  page-break-after: always;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+  
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+    min-height: auto;
+    height: auto;
+    padding: 15px;
+    margin: 10px auto;
+  }
+}
+
+ .a5-page.final {
+  width: 188mm;
+  height: 210mm;
+ 
+  padding: 80px 40px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  page-break-after: always; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+/* 
+.a5-page {
+  width: 188mm; 
+  height: 210mm;
+  padding: 20mm 15mm; 
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden; 
+  position: relative;
+  scrollbar-width: none;
+} */
+/* Hide scrollbar for Chrome, Safari and Edge */
+.a5-page::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* Mock Heading */
+.mock-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 15px;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  word-wrap: break-word;
+  
+  @media (max-width: 900px) {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mock Subheading */
+.mock-subheading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Message Container */
+.message-container {
+  margin-bottom: 20px;
+}
+
+/* Text Content */
+.text-content p {
+  font-family: "Crimson Text", serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 15px;
+  text-align: justify;
+  word-wrap: break-word;
+  
+  @media (max-width: 900px) {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+}
+
+/* Image Content */
+.image-content {
+  margin-bottom: 10px;
+}
+
+.message-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
+  display: block;
+  margin: 0 auto 15px;
+  width: auto;
+  object-fit: contain;
+  
+  @media (max-width: 900px) {
+    max-height: 40vh;
+    margin-bottom: 10px;
+  }
+}
+
+/* Video Content */
+.video-content {
+  margin-bottom: 10px;
+}
+
+.video-wrapper a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.video-wrapper a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.a5-page2 {
+  width: 100%;
+  max-width: 188mm;
+  min-height: 250mm;
+  padding: 80px !important;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px;
+  page-break-after: always;
+  font-family: "Merriweather", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  text-align: center;
+  border: 1px solid #ddd;
+  position: relative;
+  box-sizing: border-box;
+  
+  /* Responsive adjustments */
+ 
+}
+
+/* Stylish heading */
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  font-family: "Libre Baskerville";
+
+}
+
+/* Subtitle styling */
+.page-subtitle {
+  font-size: 18px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Main text styling */
+.page-content {
+  max-width: 80%;
+  text-indent: 0;
+  white-space: pre-line;
+}
+
+/* Page name/number styling */
+.page-name {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 14px;
+  color: #666;
+  
+ 
+}
+
+/* Decorative line at the bottom */
+.page-footer {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+}
