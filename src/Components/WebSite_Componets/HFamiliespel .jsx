@@ -117,7 +117,7 @@ function HFamiliespel() {
         <div className="New-container">
           <div className="New-main-Memories">
             <div className="New-Memories-salide">
-              <HBookSalider images={HFamiliespeImages} />
+              <HBookSalider   heading={"Het Familiespel Familiegesprekken"} images={HFamiliespeImages} />
             </div>
 
             <div className="New-Preserving-Memories">

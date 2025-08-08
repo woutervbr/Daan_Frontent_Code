@@ -7311,11 +7311,14 @@ section.new-hero {
 }
 
 .title-New-hero-img {
-  width: 48%;
-  margin: 0px;
-  height: 50vh;
-
-  border-radius: 10px !important;
+    width: 48%;
+    margin: 0;
+    height: 50vh;
+    border-radius: 10px !important;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
 }
 
 .New-hero-main {
@@ -7363,8 +7366,7 @@ section.new-hero {
 
 .title-New-hero-img video {
   width: 100%;
-  height: 100%;
-  max-height: 50vh; 
+  border-radius:5%;
 }
 
 .title-New-hero p {
@@ -10228,7 +10230,7 @@ img.mobile-logo {
 
   .title-New-hero-img {
     width: 100%;
-    height: 414px;
+    height: 200px !important
   }
 
   .title-New-hero-img img {
@@ -11030,7 +11032,9 @@ img.mobile-logo {
   text-align: center;
 }
 
-
+.HBookSalider-title{
+  display: none;
+}
 @media screen and (max-width: 1600px) {
   /* New one  */
   .payment-method {
@@ -14718,7 +14722,10 @@ img.mobile-logo {
 }
 
 @media screen and (max-width: 600px) {
-  
+  .HBookSalider-title{
+  display: block !important;
+  margin-bottom: 30px;
+}
   .questionnaire-guide th, .questionnaire-guide td {
     /* border: 1px solid #ccc; */
     padding: 6px !important   ;

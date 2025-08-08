@@ -159,7 +159,7 @@ function HMemories() {
         <div className="New-container">
           <div className="New-main-Memories">
             <div className="New-Memories-salide">
-              <HBookSalider images={HMemoriesImages} />
+              <HBookSalider heading={"Het levensboek"} images={HMemoriesImages} />
             </div>
 
             <div className="New-Preserving-Memories">

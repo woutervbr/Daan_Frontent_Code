@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Newleft from "../WebSite_Svg/Newleft";
 import NewRight from "../WebSite_Svg/NewRight";
 
-const HBookSalider = ({ images }) => {
+const HBookSalider = ({ images, heading }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(""); // "left" or "right"
   const [animationClass, setAnimationClass] = useState("");
@@ -52,22 +52,19 @@ const HBookSalider = ({ images }) => {
 
   const dotIndices = [0, Math.floor(images.length / 2), images.length - 1];
 
-
   useEffect(() => {
     const container = thumbnailContainerRef.current;
     const activeThumb = container?.children?.[activeIndex];
-  
+
     if (container && activeThumb) {
       const thumbOffsetLeft = activeThumb.offsetLeft;
       const thumbWidth = activeThumb.offsetWidth;
       const containerWidth = container.offsetWidth;
-  
+
       const scrollLeft = thumbOffsetLeft - (containerWidth - thumbWidth) / 2;
       container.scrollTo({ left: scrollLeft, behavior: "smooth" });
     }
   }, [activeIndex]);
-  
-  
 
   return (
     <div className="HBookSalider">
@@ -76,6 +73,8 @@ const HBookSalider = ({ images }) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
+        <h1 className="HBookSalider-title">{heading}</h1>
+
         <img
           ref={imgRef}
           src={images[activeIndex]}
@@ -105,27 +104,26 @@ const HBookSalider = ({ images }) => {
         </button>
 
         <div
-  className="HBookSalider-card-box desktop-only"
-  ref={thumbnailContainerRef}
->
-  {images.map((img, index) => (
-    <div
-      key={index}
-      className="HBookSalider-card"
-      style={{
-        border: activeIndex === index ? "3px solid #4F6780" : "none",
-        cursor: "pointer",
-      }}
-      onClick={() => {
-        triggerAnimation(index > activeIndex ? "left" : "right");
-        setActiveIndex(index);
-      }}
-    >
-      <img src={img} alt={`img-${index}`} />
-    </div>
-  ))}
-</div>
-
+          className="HBookSalider-card-box desktop-only"
+          ref={thumbnailContainerRef}
+        >
+          {images.map((img, index) => (
+            <div
+              key={index}
+              className="HBookSalider-card"
+              style={{
+                border: activeIndex === index ? "3px solid #4F6780" : "none",
+                cursor: "pointer",
+              }}
+              onClick={() => {
+                triggerAnimation(index > activeIndex ? "left" : "right");
+                setActiveIndex(index);
+              }}
+            >
+              <img src={img} alt={`img-${index}`} />
+            </div>
+          ))}
+        </div>
 
         <button onClick={handleScrollRight}>
           <NewRight />
